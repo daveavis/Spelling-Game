@@ -12,9 +12,13 @@ def load_words():
 
 def select_word():
     global done
+    found = False
     if False in words_right_dict.values():
-        word = random.choice(list(words_right_dict.keys()))
-        return word
+        while not found:
+            word = random.choice(list(words_right_dict.keys()))
+            if words_right_dict[word] == False:
+                found = True
+                return word
     else:
         done = True
     #for word in words_right_dict:
