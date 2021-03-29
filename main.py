@@ -40,13 +40,13 @@ SCREEN_WIDTH, SCREEN_HEIGHT = screen.get_size()
 
 BG_COLOR = (255, 255, 255)
 
-font = pygame.font.Font(None, 32)
+font = pygame.font.Font(None, 72)
 
 result_txt = ''
 result_color = (0,0,0)
 result = font.render(result_txt, True, result_color)
 result_rect = result.get_rect()
-result_rect.center = (SCREEN_WIDTH / 2, SCREEN_HEIGHT / 4)
+result_rect.center = (SCREEN_WIDTH / 2, SCREEN_HEIGHT / 3)
 
 done_msg = font.render('You Win!!!', True, (0, 0, 255))
 done_rect = done_msg.get_rect()
@@ -89,11 +89,11 @@ while True:
         
     left_word = font.render(l_word, True, (0,0,0))
     left_word_rect = left_word.get_rect()
-    left_word_rect.center = (SCREEN_WIDTH / 4, SCREEN_HEIGHT / 2)
+    left_word_rect.center = (SCREEN_WIDTH / 3, SCREEN_HEIGHT / 2)
 
     right_word = font.render(r_word, True, (0,0,0))
     right_word_rect = right_word.get_rect()
-    right_word_rect.center = (SCREEN_WIDTH * 3 / 4, SCREEN_HEIGHT / 2)
+    right_word_rect.center = (SCREEN_WIDTH * 2 / 3, SCREEN_HEIGHT / 2)
 
     screen.fill(BG_COLOR)
     screen.blit(left_word, left_word_rect)
