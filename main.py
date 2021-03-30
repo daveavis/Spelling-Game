@@ -34,6 +34,9 @@ def select_distractor(word):
 
 pygame.init()
 
+FPS = 30
+fpsClock = pygame.time.Clock()
+
 screen = pygame.display.set_mode((0,0), pygame.FULLSCREEN)
 pygame.display.set_caption('Spelling Game')
 SCREEN_WIDTH, SCREEN_HEIGHT = screen.get_size()
@@ -145,3 +148,4 @@ while True:
             screen.blit(done_msg, done_rect)
 
     pygame.display.update()
+    fpsClock.tick(FPS)
